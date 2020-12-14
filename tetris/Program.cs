@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace tetris
 {
@@ -8,15 +9,28 @@ namespace tetris
         {
             Console.SetWindowSize(40, 30);
             Console.SetBufferSize(40, 30);
+            Stick stk = new Stick(15, 20, 'q');
+            stk.Draw();
 
-            squreDraw sq = new squreDraw(3, 3, '*');
-            sq.Draw();
+            Thread.Sleep(1000);
+            stk.Hide();
+            stk.Move(MotionCommand.Down);
+            stk.Draw();
 
-            System.Threading.Thread.Sleep(500);
-            sq.Hide();
-            sq.Move(MotionCommand.Left);
-            sq.Draw();
+            Thread.Sleep(1000);
+            stk.Hide();
+            stk.Move(MotionCommand.Down);
+            stk.Draw();
 
+            Thread.Sleep(1000);
+            stk.Hide();
+            stk.Rotate();
+            stk.Draw();
+
+            Thread.Sleep(1000);
+            stk.Hide();
+            stk.Rotate();
+            stk.Draw();
 
             Console.ReadKey();
         
