@@ -4,11 +4,8 @@ using System.Text;
 
 namespace tetris
 {
-    class squreDraw
+    class squreDraw : Figure
     {
-
-        Point[] points = new Point[4];
-
         public squreDraw(int x, int y, char sym)
         {
             points[0] = new Point(x, y, sym);
@@ -17,10 +14,5 @@ namespace tetris
             points[3] = new Point(x+1, y+1, sym);
         }
 
-        public void Draw()
-        {
-            foreach (Point p in points)
-                p.Draw();
-        }
     }
 }
