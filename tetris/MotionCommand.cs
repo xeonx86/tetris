@@ -6,6 +6,6 @@ namespace tetris
 {
     enum MotionCommand
     {
-        Left, Right, Up, Down
+        Left, Right, Down
     }
 }
