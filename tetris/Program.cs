@@ -14,12 +14,12 @@ namespace tetris
             y1 = 4;
             int x2 = 5;
             int y2 = 4;
-            Drow(x1, y1, ch);
-            Drow(x2, y2, ch);
+            Draw(x1, y1, ch);
+            Draw(x2, y2, ch);
             Console.ReadLine();
         }
 
-        static void Drow(int x,int y, char ch)
+        static void Draw(int x,int y, char ch)
         {
             Console.SetCursorPosition(x, y);
             Console.Write(ch);
