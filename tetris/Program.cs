@@ -8,21 +8,22 @@ namespace tetris
         {
             Console.SetWindowSize(40, 30);
             Console.SetBufferSize(40, 30);
-            int x1, y1;
-            char ch = '*';
-            x1 = 3;
-            y1 = 4;
-            int x2 = 5;
-            int y2 = 4;
-            Draw(x1, y1, ch);
-            Draw(x2, y2, ch);
-            Console.ReadLine();
+
+            Point p1 = new Point();
+            p1.x = 3;
+            p1.y = 4;
+            p1.c = '*';
+            p1.Draw();
+
+            Point p2 = new Point();
+            p2.x = 4;
+            p2.y = 4;
+            p2.c = '*';
+            p2.Draw();
+
+            Console.ReadKey();
         }
 
-        static void Draw(int x,int y, char ch)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(ch);
-        }
+
     }
 }
