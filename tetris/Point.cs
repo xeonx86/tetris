@@ -15,5 +15,12 @@ namespace tetris
             Console.SetCursorPosition(x, y);
             Console.Write(c);
         }
+
+        public Point(int a, int b, char ch)
+        {
+            x = a;
+            y = b;
+            c = ch;
+        }
     }
 }

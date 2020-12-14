@@ -13,6 +13,9 @@ namespace tetris
             squreDraw sq = new squreDraw(3, 3, '*');
             sq.Draw();
 
+            Stick stk = new Stick(6, 6, '*');
+            stk.Drow();
+
 
             Console.ReadKey();
         }
